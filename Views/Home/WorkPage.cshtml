@@ -1,0 +1,25 @@
+﻿@model List<ST10357451_CLDV6211_POE_Part1.Models.WorkPage>
+@{
+    ViewData["Title"] = "My Work Page";
+}
+
+<h1>My Work Page</h1>
+<br />
+
+<div class = "container">
+    <div class = "row">
+        @foreach (var works in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width:20rem;">
+                    <img src=@works.ImageURL class="card-img-top" alt="" height=200 width=200 />
+                    <div class="card-body">
+                        <h5 class="card_title">@works.Name</h5>
+                        <p class="card-text">Category: @works.Category</p>
+                        <p class="card-text">Price: $@works.Price</p>
+                    </div>
+                </div>
+            </div>                      
+        }
+    </div>
+</div>
